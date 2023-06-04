@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+<head>
+  <style>
+    .form {
+      background-image: url('/images/aaa.jpg');
+      background-size: 100% cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="font-sans capitalize">
+  <!-- navbar section -->
+  <%- include('./partials/navbar') %>
+
+
+  <main class="form">
+
+    <!-- contact us -->
+    <section class="text-gray-600 body-font relative ">
+      <div class=" px-5 py-24 mx-auto ">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-sm">
+            if you have any questions or need a quick quote for our Products,please do not hesitate to contact us via
+            our contact form or by phone.
+            <br>
+            <br>
+            if we have not contacted you within 24 hours,please contact us by phone , wo we can always guarantee prompt
+            processing.
+          </p>
+        </div>
+        <form action="/" id="contactform" method="post">
+          <div class="lg:w-1/2 md:w-2/3 mx-auto bg-white p-5 shadow text-center">
+            <h2 class="sm:text-2xl text-xl font-medium title-font mb-4 text-gray-900">contact form</h2>
+            <div class="box" class="h-14">
+              <img src="/images/hand-shake.png" alt="hand shake image not load" class="object-cover h-14 mx-auto">
+            </div>
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="forename" class="leading-7 text-sm text-gray-600">forename *</label>
+                  <input type="text" id="forename" name="forename" required
+                  minlength="3"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="surname" class="leading-7 text-sm text-gray-600">surname *</label>
+                  <input type="text" id="surname" required name="surname"
+                  minlength="2"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="cname" class="leading-7 text-sm text-gray-600">compny name *</label>
+                  <input type="text"
+                  minlength="3" id="cname" required name="cname"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600">email *</label>
+                  <input type="email" minlength="5" id="email" required name="email"
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="telephone" class="leading-7 text-sm text-gray-600">telephone *</label>
+                  <input type="number" id="telephone" name="telephone" required
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full md:w-1/2">
+                <div class="relative">
+                  <label for="product" class="leading-7 text-sm text-gray-600">product *</label>
+                  <input type="text" id="product" name="product" required
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+
+              <div class="p-2 w-full ">
+                <div class="relative">
+                  <label for="request" class="leading-7 text-sm text-gray-600">your request *</label>
+                  <select name="request" id="request" required>
+                    <option value="requset a callback">requset a callback</option>
+                    <option value="product enquiry">product enquiry</option>
+                    <option value="other">other</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                  <textarea id="message" name="message" required
+                    class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <p id="formmessage" class="text-center text-green-500"></p>
+              <div class="p-2 w-full">
+                <button
+                type="submit"
+                  class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">send</button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                <p ><i class="fa-solid fa-envelope"></i> sales@rm-impex.com</p>
+                <p class="leading-normal my-5">
+                  <i class="fa-solid fa-phone"></i>+91-98253-92273 , 95861-10098 , 91061-37435
+                </p>
+                <p class="leading-normal my-5"><i class="fa-solid fa-location-dot"></i>E 101 sardar estate,Ajwa road no 2,
+                  Baroda-390019 , Gujarat, India .
+                </p>
+                <p class="leading-normal my-5"><i class="fa-solid fa-globe"></i>www.rm-impex.com
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('./partials/footer') %>
+ 
+  <script src="/js/menu.js"></script>
+  <script src="/js/contact.js"></script>
+
+
+</body>
+
+</html>

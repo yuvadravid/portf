@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+<body class="font-sans capitalize">
+
+
+  <div
+    class="loader z-50 w-screen h-screen fixed top-0 right-0 left-0 bottom-0 bg-white flex items-center justify-center flex-col"
+    id="loader">
+    <img src="/images/logo.webp" alt="" class="w-[200px]">
+    <img src="/images/book.gif" alt="" class="w-[50px]">
+    <span>loading ...</span>
+  </div>
+
+<!-- navbar styling -->
+<%- include('./partials/navbar') %>
+
+  <!-- hero section -->
+  <main>
+    <!-- hero part -->
+    <div class="swiper mySwiper relative h-[100vh]">
+
+     <section
+        class="text-gray-600 max-w-7xl px-10 mx-auto absolute top-0 left-0 right-0  z-50 h-full bottom-0 flex items-center">
+        <div class="mx-auto flex md:py-20 md:flex-row flex-col items-center justify-between">
+          <div
+            class="order-2 md:order-1 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="text-3xl mb-4 font-medium text-gray-50 text-center">RM-IMPLEX</h1>
+            <p class="leading-relaxed text-gray-50 text-center">
+              WE ARE GLOBAL EXPOTERS.
+            </p>
+            <blockquote class="text-3xl my-3 text-gray-50 text-center">
+              <em> "quality in everything we do."</em>
+            </blockquote>
+
+            <div class="flex justify-center mt-8">
+             <a href="/contact">
+              <button type="button"
+                class="text-gray-600 bg-white  py-2 px-6  hover:bg-transparent hover:border-2 hover:text-white rounded-sm text-lg transition-all">
+                contact us
+              </button>
+            </a>
+            </div>
+          </div>
+          <div class="hidden md:flex  order-1 md:order-2 lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="/images/bannerlogo.png" />
+          </div>
+        </div>
+      </section>
+
+
+
+      <div class="swiper-wrapper h-full absolute top-0 right-0 left-0 z-30">
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/1.jpg" alt="image" />
+        </div>
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/2.jpg" alt="image" />
+        </div>
+
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/3.jpg" alt="image" />
+        </div>
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/4.jpg" alt="image" />
+        </div>
+
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/5.jpg" alt="image" />
+        </div>
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/6.jpg" alt="image" />
+        </div>
+
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/7.jpg" alt="image" />
+        </div>
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/8.jpg" alt="image" />
+        </div>
+        <div class="swiper-slide h-full">
+          <img class="object-cover w-full h-full" src="/images/hero/9.jpg" alt="image" />
+        </div>
+
+      </div>
+      <div class="swiper-button-next nxtbtn"></div>
+      <div class="swiper-button-prev nxtbtn"></div>
+
+     
+
+    </div>
+
+
+
+    <!-- hero end -->
+
+    <!--card section  -->
+    <div class="max-w-7xl mx-auto p-5">
+
+
+      <div class="title text-center">
+        <h1 class="text-4xl my-10">
+          why choose
+          <br />
+          <span class="font-bold text-[#e08935] text-3xl">
+            RM IMPLEX
+
+          </span>
+        </h1>
+
+      </div>
+      <div class="flex items-center justify-center flex-wrap mb-10">
+        <div class="box max-w-[300px]">
+          <img src="/images/market research & intelligence.png" alt=" RM-implex" class="object-cover">
+          <h2 class="text-center text-xl text-black ">Market Research
+            & Intelligence
+          </h2>
+        </div>
+        <div class="box max-w-[300px]">
+          <img src="/images/negotiating transaction.png" alt=" RM-implex" class="object-cover">
+          <h2 class="text-center text-xl text-black">Negotiating
+            transactions
+          </h2>
+        </div>
+        <div class="box max-w-[300px]">
+          <img src="/images/technical support.png" alt=" RM-implex" class="object-cover">
+          <h2 class="text-center text-xl text-black">technical support
+          </h2>
+        </div>
+        <div class="box max-w-[300px]"> <img src="/images/logistics support.png" alt=" RM-implex"
+            class="object-cover">
+          <h2 class="text-center text-xl text-black">logistics support
+          </h2>
+        </div>
+        <div class="box max-w-[300px]"> <img src="/images/completions.png" alt=" RM-implex"
+            class="object-cover">
+          <h2 class="text-center text-xl text-black">completion of
+            procedural
+            formalities
+
+          </h2>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </main>
+
+
+
+
+
+  <!-- footer -->
+  <%- include('./partials/footer') %>
+  <script>
+    const load = document.querySelector('.loader');
+    window.addEventListener('load', () => {
+      load.classList.add('hidden')
+    })
+  </script>
+  <script src="/js/menu.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop:true,
+      autoplay: {
+        delay: 1300,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
